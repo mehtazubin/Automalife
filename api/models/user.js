@@ -6,7 +6,9 @@ var Schema = mongoose.Schema;
 var UserSchema = new Schema({
   username: {
     type: String,
-    Required: 'Please provide a name'
+    Required: 'Please provide a name',
+    unique: true,
+    index: true
   },
   join_date: {
     type: Date,
@@ -16,7 +18,7 @@ var UserSchema = new Schema({
     type: String
   },
   password: {
-    type: String
+    type: String,
   }
 });
 
