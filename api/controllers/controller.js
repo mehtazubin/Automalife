@@ -25,7 +25,7 @@ exports.create_user = function(req, res) {
 
 exports.find_user = function(req, res) {
   var query = {};
-  query[username] = req.params.username; 
+  query['username'] = req.params.username; 
   User.findOne(query, function(err, user) {
     if (err)
       res.send(err);
