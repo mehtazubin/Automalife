@@ -2,7 +2,8 @@ var express = require('express'),
   app = express(),
   port = process.env.PORT || 4200,
   mongoose = require('mongoose'),
-  Task = require('./api/models/model'),
+  User = require('./api/models/user'),
+  Program = require('./api/models/program'),
   bodyParser = require('body-parser');
   cors = require('cors');
   
