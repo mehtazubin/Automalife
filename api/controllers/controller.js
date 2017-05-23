@@ -24,7 +24,9 @@ exports.create_user = function(req, res) {
 
 
 exports.find_user = function(req, res) {
-  User.findById(req.params.userId, function(err, user) {
+  var query = {};
+  query[username] = req.params.username; 
+  User.findOne(query, function(err, user) {
     if (err)
       res.send(err);
     res.json(user);
@@ -44,7 +46,7 @@ exports.update_user = function(req, res) {
 exports.delete_user = function(req, res) {
 
   User.remove({
-    _id: req.params.userId
+    username: req.params.username
   }, function(err, user) {
     if (err)
       res.send(err);

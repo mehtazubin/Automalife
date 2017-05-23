@@ -9,7 +9,7 @@ module.exports = function(app) {
     .post(todoList.create_user);
 
 
-  app.route('/users/:userId')
+  app.route('/users/:username')
     .get(todoList.find_user)
     .put(todoList.update_user)
     .delete(todoList.delete_user);

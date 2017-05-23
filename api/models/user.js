@@ -12,7 +12,7 @@ var UserSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  Display_name: {
+  display_name: {
     type: String
   },
   password: {
